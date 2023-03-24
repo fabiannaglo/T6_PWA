@@ -1,19 +1,19 @@
-<div>
-    <div>
-        <label>Datum</label>
-        <input type="text" />
+<div class="form-outer">
+    <div class="form-element">
+        <label for="date">Datum</label>
+        <input #date id="date" type="date" required [ngModel] ="dt | date:'yyyy-MM-dd'" (ngModelChange)="dt = $event">
     </div>
-    <div>
-        <label>Startzeit</label>
-        <input type="text" />
+    <div class="form-element form-time">
+        <label for="startTime">Startzeit</label>
+        <input #startTime id="startTime" type="time" required />
     </div>
-    <div>
-        <label>Endzeit</label>
-        <input type="text" />
+    <div class="form-element form-time">
+        <label for="endTime">Endzeit</label>
+        <input #endTime id="endTime" type="time" required />
     </div>
-    <div>
-        <label>Mitarbeiter</label>
-        <select>
+    <div class="form-element">
+        <label for="worker">Mitarbeiter</label>
+        <select #worker id="worker" required>
             <option>Christoph Ratzinger</option>
             <option>Steffen Arbeit</option>
             <option>Julian Frei</option>
