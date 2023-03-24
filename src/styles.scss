@@ -14,10 +14,19 @@ html{
     &.darkmode{
         filter: invert(1);
     }
+
+    &.transition{
+        transition: 0.35s ease-in-out;
+    }
 }
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif !important;
     background-color: #eee;
+}
+
+app-nav{
+    position: relative;
+    z-index: 2;
 }
