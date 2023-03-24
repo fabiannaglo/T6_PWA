@@ -14,12 +14,17 @@
     <div class="form-element">
         <label for="worker">Mitarbeiter</label>
         <select #worker id="worker" required>
-            <option>Christoph Ratzinger</option>
-            <option>Steffen Arbeit</option>
-            <option>Julian Frei</option>
+            <option disabled selected>Bitte auswählen</option>
+
+            <ng-container *ngFor="let worker of workerList">
+                <option>{{ worker[0] }}</option>
+            </ng-container>
         </select>
     </div>
-    <div>
-        <button (click)="add()">Bestätigen</button>
+    <div class="form-element form-submit">
+        <button (click)="add(date.value, startTime.value, endTime.value, worker.value)">Bestätigen</button>
     </div>
+
+    <div class="form-element form-response" id="form-response"></div>
+
 </div>

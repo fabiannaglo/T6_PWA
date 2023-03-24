@@ -1,1 +1,75 @@
-<p>month-output works!</p>
+
+<div class="time-info"><span>Letzte 30 Tage</span></div>
+<ul>
+    <ng-container *ngFor="let time of timeInput">
+        <li *ngIf="timeList.includes(time.date)">
+            <div class="inner">
+                <div class="worker">{{ time.worker }}</div>
+                <div class="date">
+                    <b>Datum:</b> {{ time.date }}
+                </div>
+                <div class="worked-time">
+                    <b>Arbeitszeit:</b> {{ time.startTime }} - {{ time.endTime }} Uhr
+                </div>
+                <div class="workingTime">
+                    <b>Dauer:</b> {{ time.workedTime }}h
+                </div>
+                <div class="costPerHour">
+                    <b>Stundenlohn:</b> {{ time.stundenlohn.toFixed(2) }}€
+                </div>
+                <div class="cost">
+                    <b>Kosten:</b> {{ (time.workedTime * time.stundenlohn).toFixed(2) }}€
+                </div>
+            </div>
+        </li>
+    </ng-container>
+
+    <div *ngIf="timeInput.length >= 2" class="decade-info">
+        <ol>
+            <li>
+                <div class="text">Gesamte Arbeitszeit:</div>
+                <div class="content">{{ gesWorktime }}h</div>
+            </li>
+            <li>
+                <div class="text">Aktive Mitarbeiter:</div>
+                <div class="content">{{ gesWorker }}</div>
+            </li>
+            <li>
+                <div class="text">Längste Arbeitszeit:</div>
+                <div class="content">{{ longestWorktime }}h ({{ longestWorker }})</div>
+            </li>
+            <li>
+                <div class="text">Entstandene Kosten:</div>
+                <div class="content">{{ gesamtkosten.toFixed(2) }}€</div>
+            </li>
+        </ol>
+    </div>
+
+    <li *ngIf="gesWorktime == 0" class="no-entries">
+        Keine Einträge vorhanden
+    </li>
+</ul>
+
+    
+<div class="time-info"><span>Vorher</span></div>
+<ul>
+    <ng-container *ngFor="let time of timeInput">
+        <li *ngIf="!timeList.includes(time.date)">
+            <div class="inner">
+                <div class="worker">{{ time.worker }}</div>
+                <div class="date">
+                    <b>Datum:</b> {{ time.date }}
+                </div>
+                <div class="worked-time">
+                    <b>Arbeitszeit:</b> {{ time.startTime }} - {{ time.endTime }} Uhr
+                </div>
+                <div class="workingTime">
+                    <b>Dauer:</b> {{ time.workedTime }}h
+                </div>
+                <div class="cost">
+                    <b>Kosten:</b> {{ (time.workedTime * time.stundenlohn).toFixed(2) }}€
+                </div>
+            </div>
+        </li>
+    </ng-container>
+</ul>
