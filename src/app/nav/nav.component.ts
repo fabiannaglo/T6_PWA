@@ -19,4 +19,8 @@ export class NavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {
  
   }
+
+  changeDarkmode(){
+    document.documentElement.classList.toggle("darkmode");
+  }
 }

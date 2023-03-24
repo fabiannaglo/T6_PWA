@@ -5,7 +5,7 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Navigation</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Home</a>
+      <a mat-list-item href="/eingabe">Zeit erfassen</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,6 +20,9 @@
       </button>
       <span>TickTock</span>
       <span class="example-spacer"></span>
+      <button (click)="changeDarkmode()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>dark_mode</mat-icon>
+      </button> 
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>
