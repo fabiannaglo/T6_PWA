@@ -1,0 +1,40 @@
+.sidenav-container {
+  height: auto;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background-color: transparent;
+  transition: 0.35s ease-in-out;
+
+  &.mat-drawer-container-has-open{
+    height:100%;
+  }
+}
+
+.mat-drawer-content{
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.fixed-bottom{
+  position: absolute;
+  bottom:0;
+  left:0;
+}
