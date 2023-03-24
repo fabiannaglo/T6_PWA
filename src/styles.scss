@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+$maincolor: #c2185b;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #eee;
+}
