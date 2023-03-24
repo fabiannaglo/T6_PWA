@@ -20,6 +20,10 @@ export class NavComponent {
  
   }
 
+  clearInputs(){
+    console.log("Eingaben löschen");
+  }
+
   changeDarkmode(){
     document.documentElement.classList.toggle("darkmode");
   }
