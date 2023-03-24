@@ -1,0 +1,29 @@
+$maincolor: #c2185b;
+
+
+label{
+    font-weight: 600;
+    margin:0 0 5px;
+    display: block;
+}
+    
+input,
+select{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    width: 100%;
+    padding:15px;
+    border: none;
+    outline:none;
+    font-size: 14px;
+}
+    
+button{
+    background-color: $maincolor;
+    color: #fff;
+    font-weight: 600;
+    padding:15px;
+    border: none;
+    outline:none;
+    font-size: 14px;
+}
