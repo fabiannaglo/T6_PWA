@@ -13,11 +13,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { WeekOutputComponent } from './week-output/week-output.component';
+import { MonthOutputComponent } from './month-output/month-output.component';
+import { TimeInputComponent } from './time-input/time-input.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    NavComponent
+    TimeInputComponent,
+    WeekOutputComponent,
+    MonthOutputComponent,
+    NavComponent    
   ],
   imports: [
     FormsModule,
